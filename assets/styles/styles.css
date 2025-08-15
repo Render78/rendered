@@ -306,7 +306,7 @@ header {
 @media (min-width: 992px) {
     .history-grid {
         flex-direction: row;
-        align-items: stretch;        
+        align-items: stretch;
     }
 }
 
