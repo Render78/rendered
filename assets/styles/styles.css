@@ -26,11 +26,33 @@ body {
 }
 
 header {
-    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
-    padding: 5rem 1rem 3rem;
-    text-align: center;
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);    
+    text-align: unset;
     border-bottom: 1px solid var(--color-hover);
     position: relative;
+}
+
+.unified-header {    
+    border-bottom: 1px solid var(--color-hover);
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 0;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .branding h1 {
@@ -38,35 +60,32 @@ header {
     font-weight: 600;
     color: var(--color-primary);
     letter-spacing: 3px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    text-align: left;
     text-shadow: 0 2px 5px rgba(30, 144, 255, 0.2);
 }
 
-.branding .slogan {
-    font-size: 1.2rem;
-    font-weight: 300;
-    opacity: 0.8;
-    color: var(--color-text);
-}
-
 .navbar-glass {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-hover);
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    transition: background 0.3s ease;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-links li a {
@@ -478,18 +497,45 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-    .nav-links {
+@media (max-width: 900px) {
+    .header-container {
         flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    .navbar-glass {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+    .nav-links {
+        justify-content: flex-start;
+        gap: 1.2rem;
+    }
+    .branding {
+        flex-direction: row;
         align-items: center;
+    }
+    .branding h1 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
         gap: 1rem;
     }
-
-    .branding h1 {
-        font-size: 2.5rem;
+    .navbar-glass {
+        justify-content: flex-start;
+        margin-top: 1rem;
     }
-
-    .branding .slogan {
-        font-size: 1rem;
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+    .branding h1, .branding .slogan {
+        text-align: left;
     }
 }
