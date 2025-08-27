@@ -26,13 +26,13 @@ body {
 }
 
 header {
-    background: linear-gradient(145deg, #0a0a0a 60%, #101820);    
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
     text-align: unset;
     border-bottom: 1px solid var(--color-hover);
     position: relative;
 }
 
-.unified-header {    
+.unified-header {
     border-bottom: 1px solid var(--color-hover);
     background: linear-gradient(145deg, #0a0a0a 60%, #101820);
 }
@@ -298,6 +298,80 @@ header {
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.08);
 }
 
+.services-section {
+    background-color: #0e1117;
+    color: var(--color-text);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.services-grid {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Texto superior */
+.services-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Contenedor de cards */
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* Card */
+.service-card {
+    background-color: #1a1d24;
+    border: 1px solid var(--color-hover);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 28px rgba(30, 144, 255, 0.18);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+
 .history-section {
     background-color: #0e1117;
     color: var(--color-text);
@@ -503,18 +577,22 @@ header {
         align-items: stretch;
         gap: 1.5rem;
     }
+
     .navbar-glass {
         justify-content: flex-start;
         margin-top: 1rem;
     }
+
     .nav-links {
         justify-content: flex-start;
         gap: 1.2rem;
     }
+
     .branding {
         flex-direction: row;
         align-items: center;
     }
+
     .branding h1 {
         text-align: left;
     }
@@ -526,16 +604,20 @@ header {
         align-items: stretch;
         gap: 1rem;
     }
+
     .navbar-glass {
         justify-content: flex-start;
         margin-top: 1rem;
     }
+
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.7rem;
     }
-    .branding h1, .branding .slogan {
+
+    .branding h1,
+    .branding .slogan {
         text-align: left;
     }
 }
