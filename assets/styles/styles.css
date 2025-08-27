@@ -376,6 +376,79 @@ header {
     margin-top: 2rem;
 }
 
+.choose-section {
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
+    color: var(--color-text);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.choose-grid {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Texto superior */
+.choose-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.choose-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Contenedor de cards */
+.choose-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+/* Card */
+.choose-card {
+    background-color: #1a1d24;
+    border: 1px solid var(--color-hover);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.08);
+}
+
+.choose-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 28px rgba(30, 144, 255, 0.18);
+}
+
+.choose-card i {
+    font-size: 2.3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.choose-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.choose-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
 
 .history-section {
     background: linear-gradient(145deg, #0a0a0a 60%, #101820);
