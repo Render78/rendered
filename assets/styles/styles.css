@@ -548,7 +548,7 @@ header {
 }
 
 .services-section {
-    background-color: #0e1117;
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
     color: var(--color-text);
     padding: 4rem 2rem;
     display: flex;
@@ -615,7 +615,7 @@ header {
 }
 
 .testimonials-section {
-    background-color: #0e1117;
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
     color: var(--color-text);
     padding: 4rem 2rem;
     display: flex;
@@ -679,7 +679,7 @@ header {
 }
 
 .gallery-section {
-    background-color: #0e1117;
+    background: linear-gradient(145deg, #0a0a0a 60%, #101820);
     color: var(--color-text);
     padding: 4rem 2rem;
     text-align: center;
