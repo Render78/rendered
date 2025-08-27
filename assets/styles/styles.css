@@ -721,6 +721,57 @@ header {
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
 }
 
+.cta-section {
+    background: linear-gradient(135deg, var(--color-primary), #007bff);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3rem auto;
+    max-width: 1000px;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.25);
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0e1117;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1a1d24;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-note {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
 
 .note {
     margin-top: 1.5rem;
