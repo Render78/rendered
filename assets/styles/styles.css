@@ -371,6 +371,11 @@ header {
     line-height: 1.6;
 }
 
+.services-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 
 .history-section {
     background-color: #0e1117;
