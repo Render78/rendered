@@ -496,7 +496,7 @@ header {
     font-size: 1rem;
 }
 
-.history-text strong {
+strong {
     color: var(--color-primary);
     font-weight: 600;
 }
