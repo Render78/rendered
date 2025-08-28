@@ -1,15 +1,16 @@
-let slideIndex = 0;
-const slide = document.querySelector('.carousel-slide');
-const totalItems = document.querySelectorAll('.carousel-item').length;
+document.getElementById("budget-button").addEventListener("click", function (e) {
+    e.preventDefault();
 
-function moveSlide(direction) {
-    slideIndex += direction;
+    const nombre = prompt("Por favor ingresa tu nombre:");
+    const servicio = prompt("¿Qué servicio necesitas?");
 
-    if (slideIndex < 0) {
-        slideIndex = totalItems - 1;
-    } else if (slideIndex >= totalItems) {
-        slideIndex = 0;
+    if (nombre && servicio) {
+        const mensaje = `Hola, quiero solicitar un presupuesto. Mi nombre es ${nombre} y necesito el servicio de ${servicio}.`;
+
+        const url = `https://wa.me/543512046426?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, "_blank");
+    } else {
+        alert("Por favor completa tu nombre y servicio para continuar.");
     }
-
-    slide.style.transform = `translateX(-${slideIndex * 100}%)`;
-}
+});
