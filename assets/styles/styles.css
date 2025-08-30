@@ -483,13 +483,6 @@ header {
     letter-spacing: 1px;
 }
 
-@media (min-width: 992px) {
-    .history-grid {
-        flex-direction: row;
-        align-items: stretch;
-    }
-}
-
 strong {
     color: var(--color-primary);
     font-weight: 600;
@@ -842,7 +835,7 @@ strong {
     }
 
     .branding h1,
-    .branding .slogan {
+    .branding {
         text-align: left;
     }
 }
