@@ -668,6 +668,8 @@ strong {
 /* Estilo de imágenes */
 .gallery-grid img {
     width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
     height: auto;
     border-radius: 12px;
     object-fit: cover;
@@ -677,7 +679,7 @@ strong {
 
 /* Hover */
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
 }
 
