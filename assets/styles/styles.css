@@ -424,6 +424,7 @@ header {
     transform: translateY(-6px);
     border-color: var(--color-primary);
     box-shadow: 0 12px 28px rgba(30, 144, 255, 0.18);
+    cursor: pointer;
 }
 
 .service-card i {
@@ -504,6 +505,7 @@ header {
     transform: translateY(-6px);
     border-color: var(--color-primary);
     box-shadow: 0 12px 28px rgba(30, 144, 255, 0.18);
+    cursor: pointer;
 }
 
 .choose-card i {
