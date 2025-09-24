@@ -1,21 +1,49 @@
 // Presupuesto WhatsApp
 const budgetButton = document.getElementById("budget-button");
+const modal = document.getElementById("budget-modal");
+const form = document.getElementById("budget-form");
+const closeBtn = document.querySelector(".close-button");
+
+function openModal() {
+    modal.classList.add("active");
+}
+
+function closeModal() {
+    modal.classList.add("closing");
+    setTimeout(() => {
+        modal.classList.remove("active", "closing");
+    }, 400); // mismo tiempo que la animación CSS
+}
 
 if (budgetButton) {
-    budgetButton.addEventListener("click", function (e) {
+    budgetButton.addEventListener("click", (e) => {
         e.preventDefault();
+        openModal();
+    });
+}
 
-        const nombre = prompt("Por favor ingresa tu nombre:");
-        const servicio = prompt("¿Qué servicio necesitas?");
+if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+}
 
-        if (nombre && servicio) {
-            const mensaje = `Hola, quiero solicitar un presupuesto. Mi nombre es ${nombre} y necesito el servicio de ${servicio}.`;
+// cerrar modal al enviar formulario
+if (form) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userName = document.getElementById("userName").value.trim();
+        const service = document.getElementById("service").value.trim();
 
-            const url = `https://wa.me/543512046426?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, "_blank");
-        } else {
-            alert("Por favor completa tu nombre y servicio para continuar.");
+        if (!userName || !service) {
+            alert("Por favor completa todos los campos.");
+            return;
         }
+
+        const mensaje = `Hola, quiero solicitar un presupuesto. Mi nombre es ${userName} y necesito el servicio de ${service}.`;
+        const url = `https://wa.me/543512046426?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+
+        form.reset();
+        closeModal();
     });
 }
 

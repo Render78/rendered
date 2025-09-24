@@ -245,7 +245,8 @@
                     Te ofrecemos <b>reparaciones rápidas, garantía asegurada y precios accesibles</b>.
                 </p>
                 <a href="#contacto" class="cta-button">Contáctanos Ahora</a>
-                <p class="cta-note"><i class="bi bi-lightbulb-fill"></i> Atención personalizada y soporte a domicilio en Córdoba capital.</p>
+                <p class="cta-note"><i class="bi bi-lightbulb-fill"></i> Atención personalizada y soporte a domicilio en
+                    Córdoba capital.</p>
             </div>
         </section>
 
@@ -280,6 +281,24 @@
     <a href="#main-header" class="scroll-to-top" aria-label="Volver arriba">
         <i class="bi bi-arrow-up"></i>
     </a>
+
+    <div id="budget-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Solicitar presupuesto</h3>
+            <form id="budget-form">
+                <label for="userName">Tu nombre:</label>
+                <input type="text" id="userName" placeholder="Ingresa tu nombre" required>
+
+                <label for="service">Servicio que necesitas:</label>
+                <input type="text" id="service" placeholder="Ej: Reparación de PC" required>
+
+                <div class="modal-actions">
+                    <button type="submit" class="hero-button">Enviar por WhatsApp</button>
+                    <button type="button" class="close-button">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="./assets/scripts/main.js"></script>
 </body>
